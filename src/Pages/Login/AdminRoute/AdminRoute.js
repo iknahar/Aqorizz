@@ -8,7 +8,7 @@ const AdminRoute = ({ children, ...rest }) => {
     const [isAdmin, setIsAdmin] = useState(true);
 
     useEffect(() => {
-        fetch(`https://fast-earth-44959.herokuapp.com/checkAdmin/${user?.email}`)
+        fetch(`http://localhost:3000/checkAdmin/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data[0]?.role === "admin") {
