@@ -5,6 +5,9 @@ import Register from "./Pages/Login/Register/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Header from "./compoent/Shared/Header";
 import Home from "./compoent/Home/Home/Home";
+import RightAquarium from "./compoent/Home/Articel/RightAquarium";
+import WhatKind from "./compoent/Home/Articel/WhatKins";
+import Lipsome from "./compoent/Home/Articel/Lipsam";
 
 function App() {
   return (
@@ -21,6 +24,15 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/right">
+              <RightAquarium></RightAquarium>
+            </Route>
+            <Route path="/whatKind">
+              <WhatKind></WhatKind>
+            </Route>
+            <Route path="/lipsam">
+              <Lipsome></Lipsome>
             </Route>
             <Route path="/register">
               <Register />

@@ -1,0 +1,29 @@
+.product-detilas img {
+  width: 100%;
+  padding-left: 10%;
+  padding-top: 100px;
+}
+.product-detilas {
+  padding-top: 90px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.deils-info {
+  font-family: "Dancing Script", cursive;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Merriweather", serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(75, 64, 64);
+}
+.siilar {
+  text-align: center;
+  color: #06175c;
+  font-size: 70px;
+  font-weight: 900;
+  padding-top: 100px;
+}
+.similar-img h4 {
+  color: #06175c;
+  text-align: center;
+}
