@@ -1,0 +1,23 @@
+.service-icon{
+    width: 96px;
+    height: 96px;
+    background-color: #00c3ed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-icon i{
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.service-icon:hover {
+    background-color: #06175C;
+    color: #00c3ed;
+    transition: 0.4s;
+}
+.service-icon:hover i {
+    color: #00c3ed !important;
+   
+}
