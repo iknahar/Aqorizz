@@ -17,7 +17,7 @@ const AdminRoute = ({ children, ...rest }) => {
                     setIsAdmin(false);
                 }
             });
-    }, []);
+    }, [user?.email]);
 
     if (isLoading) { return <Spinner animation="grow" /> }
     console.log(isAdmin)

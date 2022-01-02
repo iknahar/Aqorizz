@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
+
+    const { user, logout } = useAuth();
 
     return (
         <div>
@@ -19,26 +22,23 @@ const Header = () => {
                             <Link to="/about" className="item">About</Link>
                             <Link to="/contact" className="item">Contact</Link>
                         </Nav>
-                        {/* {
+                        {
                             user?.email ?
                                 <>
                                     <Nav className="menu-item">
-                                        <Link to="/dashboard">Dashboard</Link>
+                                        <Link to="/dashboard" className='item'>Dashboard</Link>
                                     </Nav>
                                     <div className="d-flex me-3 user">
                                         {user?.photoURL && <img className="img-fluid user-img mt-2" src={user?.photoURL} alt="userimage" />}
                                         <p className="pt-3 ps-2 text-warning">{user?.displayName}</p>
                                     </div>
-                                    <Button variant="warning" onClick={logOut}><i className="fas fa-sign-out-alt me-1"></i> Logout</Button>
+                                    <Button variant="warning" onClick={logout}><i className="fas fa-sign-out-alt me-1"></i> Logout</Button>
                                 </>
                                 :
                                 <Link to="/login">
                                     <Button variant="warning"><i className="fas fa-sign-in-alt me-1"></i> Login</Button>
                                 </Link>
-                        } */}
-                        <Link to="/login">
-                            <Button variant="warning"><i className="fas fa-sign-in-alt me-1"></i> Login</Button>
-                        </Link>
+                        }
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
