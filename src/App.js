@@ -4,6 +4,7 @@ import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Header from "./compoent/Shared/Header";
+import Home from "./compoent/Home/Home/Home";
 
 function App() {
   return (
@@ -12,6 +13,12 @@ function App() {
         <Router>
           <Header></Header>
           <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
             <Route path="/login">
               <Login />
             </Route>

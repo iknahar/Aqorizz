@@ -13,14 +13,14 @@ const Header = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        bg="primary"
+        bg="dark"
         variant="dark"
         fixed="top"
-        style={{ height: "50px" }}
+        // style={{ height: "50px" }}
       >
         <Container>
           <Link style={{ textDecoration: "none" }} to="/home">
-            <Navbar.Brand className="fw-bold text-decoration-none">
+            <Navbar.Brand className="titlele-Head text-decoration-none fs-5">
               Aqorizz
             </Navbar.Brand>
           </Link>
@@ -42,7 +42,7 @@ const Header = () => {
             </Nav>
             {user?.email ? (
               <>
-                <Nav className="menu-item">
+                <Nav className="menu-item dasbordmenu">
                   <Link to="/dashboard">Dashboard</Link>
                 </Nav>
                 <div className="d-flex me-3 user">
@@ -53,7 +53,7 @@ const Header = () => {
                       alt="userimage"
                     />
                   )}
-                  <p className="pt-3 ps-2 text-warning">{user?.displayName}</p>
+                  <p className="pt-3 ps-2 text-success">{user?.displayName}</p>
                 </div>
                 <Button variant="warning" onClick={logout}>
                   <i className="fas fa-sign-out-alt me-1"></i> Logout

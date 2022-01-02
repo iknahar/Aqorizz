@@ -2,12 +2,29 @@
   text-decoration: none;
   margin-right: 30px;
   color: white;
+  font-family: "Dancing Script", cursive;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Merriweather", serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 .item:hover {
-  background-color: aliceblue;
-  color: black;
-  padding: 5px;
-  border-radius: 10px;
+  /* background-color: aliceblue; */
+  color: tomato;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+.dasbordmenu a:hover {
+  color: tomato;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+.titlele-Head {
+  font-family: "Dancing Script", cursive;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Merriweather", serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 .user-img {
   width: 40px;
