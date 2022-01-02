@@ -12,6 +12,7 @@ const Banner = () => {
             src="https://i.postimg.cc/x1B5K0Nc/david-clode-ekthr-VC-DVs-unsplash.jpg"
             alt="First slide"
           />
+
           <Carousel.Caption>
             <h3 className="text-warning">Cory Catfish</h3>
             <p>
