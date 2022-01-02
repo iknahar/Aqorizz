@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useRouteMatch } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
 
 const Sidebar = () => {
 
-    const { logOut, admin } = useAuth();
+    const [isAdmin, setIsAdmin] = useState(false);
+    const { user, logout } = useAuth();
+
+    useEffect(() => {
+        fetch(`https://powerful-hollows-26581.herokuapp.com/checkAdmin/${user?.email}`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data[0]?.role === "admin") {
+                    setIsAdmin(true);
+                } else {
+                    setIsAdmin(false);
+                }
+            });
+    }, [user?.email]);
+
 
     let { url } = useRouteMatch();
 
@@ -19,7 +33,7 @@ const Sidebar = () => {
                 <Link style={style} to="/home">
                     <h3><i className="fas fa-house-user"></i> Home</h3>
                 </Link>
-                {!admin &&
+                {!isAdmin &&
                     <ul>
                         <Link style={style} to={`${url}/myOrders`}>
                             <li>My Orders</li>
@@ -32,7 +46,7 @@ const Sidebar = () => {
                         </Link>
                     </ul>
                 }
-                {admin &&
+                {isAdmin &&
                     <ul>
                         <Link style={style} to={`${url}/manageOrders`}>
                             <li>Manage Orders</li>
@@ -51,7 +65,7 @@ const Sidebar = () => {
                     </ul>
                 }
                 <ul className="text-start">
-                    <li style={{ marginTop: '30px' }} onClick={logOut}><i className="fas fa-sign-out-alt me-1"></i> Logout</li>
+                    <li style={{ marginTop: '30px' }} onClick={logout}><i className="fas fa-sign-out-alt me-1"></i> Logout</li>
                 </ul>
             </div>
 

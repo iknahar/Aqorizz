@@ -9,7 +9,7 @@ const Chart = ({ data, COLORS }) => {
         <div>
             <Container className='mt-5'>
                 <Row className="g-4">
-                    <Col md={4}>
+                    <Col md={6}>
                         <PieChart width={400} height={400} style={{ backgroundColor: '#ffffff' }}>
                             <Pie data={data} dataKey="Quantity" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" label>
                                 {data.map((entry, index) => (
@@ -19,7 +19,7 @@ const Chart = ({ data, COLORS }) => {
                             <Tooltip />
                         </PieChart>
                     </Col>
-                    <Col md={8}>
+                    <Col md={6}>
                         <BarChart
                             className="bar-chart"
                             width={500}
