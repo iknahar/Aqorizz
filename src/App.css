@@ -1,0 +1,29 @@
+/*----------------
+service item style
+--------------*/
+
+.service-icon{
+    height: 96px;
+    width: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 37px;
+    transition: 0.5s;
+border-radius: 50%;
+color: whitesmoke;
+margin-top: 50px;
+background-color: #00C3ED;
+
+};
+.service{}
+
+.service:hover .service-icon{
+    background-color: #06175C !important;
+    color: #00C3ED;
+};
+
+.service h6:hover h6{
+    color: #00C3ED;
+    transition: 0.5s;
+};
