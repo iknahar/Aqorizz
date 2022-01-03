@@ -1,12 +1,13 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
+import '../../App.css';
+import '../style/style.css';
 
 const Banner = () => {
-    // 
-    // style={{ backgroundImage: `url()`, height: "400px", backgroundSize: 'cover', width: '50%' }}
+
     return (
         <section className='container-lg banner-section'>
-            <Row >
+            <Row>
                 <Col lg={6} xs={12} className='p-0'>
                     <img width="585" height="416" style={{ marginLeft: "63px" }} src="https://i.postimg.cc/6p05PrjX/image-4.jpg" alt="bannerImg" />
                 </Col>
@@ -25,7 +26,10 @@ const Banner = () => {
                             The AquaPro have created some of the most stylish and luxury bespoke built aquariums and fish tanks in the country. We draw on over 25 years of expertise in designing, manufacturing and installing aquariums.
                         </p>
 
-                        <button style={{ border: '2px solid #2AA2B0', color: "#2AA2B0", padding: "10px 25px", fontSize: '13px', fontWeight: "bold", background: "#fff", marginTop: 10 }}>
+                        <button
+                            className='banner-button'
+                            style={{ border: '2px solid #2AA2B0', color: "#2AA2B0", padding: "10px 25px", fontSize: '13px', fontWeight: "bold", background: "#fff", marginTop: 10 }}
+                        >
                             MORE INFO
                         </button>
                     </article>
