@@ -43,6 +43,9 @@ const Dashboard = () => {
                             <Route exact path={`${path}`}>
                                 <DashboardHome></DashboardHome>
                             </Route>
+                            <Route path={`${path}/overview`}>
+                                <DashboardHome></DashboardHome>
+                            </Route>
                             <Route path={`${path}/myOrders`}>
                                 <MyOrders></MyOrders>
                             </Route>

@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`https://young-falls-65140.herokuapp.com/orders?email=${user.email}`)
+        fetch(`https://powerful-hollows-26581.herokuapp.com/myOrder/${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user.email]);
@@ -26,7 +26,7 @@ const MyOrders = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://young-falls-65140.herokuapp.com/orders/${id}`, {
+                fetch(`https://powerful-hollows-26581.herokuapp.com/delete/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

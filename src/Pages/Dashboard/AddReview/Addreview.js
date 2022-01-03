@@ -11,7 +11,7 @@ const Addreview = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch('https://young-falls-65140.herokuapp.com/reviews', {
+        fetch('https://powerful-hollows-26581.herokuapp.com/addSReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

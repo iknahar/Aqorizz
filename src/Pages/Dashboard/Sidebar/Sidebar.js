@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, useRouteMatch } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
 
 const Sidebar = () => {
 
-    const [isAdmin, setIsAdmin] = useState(false);
-    const { user, logout } = useAuth();
-
-    useEffect(() => {
-        fetch(`https://powerful-hollows-26581.herokuapp.com/checkAdmin/${user?.email}`)
-            .then((res) => res.json())
-            .then((data) => {
-                if (data[0]?.role === "admin") {
-                    setIsAdmin(true);
-                } else {
-                    setIsAdmin(false);
-                }
-            });
-    }, [user?.email]);
-
-
+    const { isAdmin, logout } = useAuth();
     let { url } = useRouteMatch();
 
     const style = {
@@ -29,7 +14,7 @@ const Sidebar = () => {
 
     return (
         <div style={{ height: '100vh' }}>
-            <div class="sidebar-offcanvas pl-0" id="sidebar" role="navigation">
+            <div className="sidebar-offcanvas pl-0" id="sidebar" role="navigation">
                 <Link style={style} to="/home">
                     <h3><i className="fas fa-house-user"></i> Home</h3>
                 </Link>
@@ -48,6 +33,9 @@ const Sidebar = () => {
                 }
                 {isAdmin &&
                     <ul>
+                        <Link style={style} to={`${url}/overview`}>
+                            <li>Overview</li>
+                        </Link>
                         <Link style={style} to={`${url}/manageOrders`}>
                             <li>Manage Orders</li>
                         </Link>

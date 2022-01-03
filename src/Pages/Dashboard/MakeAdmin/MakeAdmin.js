@@ -12,7 +12,7 @@ const MakeAdmin = () => {
 
     const handleAdminForm = e => {
         const user = { email };
-        fetch('https://young-falls-65140.herokuapp.com/users/admin', {
+        fetch('https://powerful-hollows-26581.herokuapp.com/makeAdmin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -28,7 +28,7 @@ const MakeAdmin = () => {
                         title: 'Made Admin Successfully',
                         showConfirmButton: false,
                         timer: 2000
-                    });
+                    })
                     e.target.reset();
                 }
             })

@@ -8,7 +8,7 @@ const ManageProducts = () => {
 
 
     useEffect(() => {
-        fetch('https://young-falls-65140.herokuapp.com/cycles')
+        fetch('https://powerful-hollows-26581.herokuapp.com/allProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
@@ -24,7 +24,7 @@ const ManageProducts = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://young-falls-65140.herokuapp.com/cycles/${id}`, {
+                fetch(`https://powerful-hollows-26581.herokuapp.com/pdelete/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

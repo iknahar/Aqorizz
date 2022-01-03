@@ -8,7 +8,8 @@ const Chart = ({ data, COLORS }) => {
     return (
         <div>
             <Container className='mt-5'>
-                <Row className="g-4">
+                <h3>Statistics of Website</h3>
+                <Row className="g-4 mt-4">
                     <Col md={6}>
                         <PieChart width={400} height={400} style={{ backgroundColor: '#ffffff' }}>
                             <Pie data={data} dataKey="Quantity" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" label>
