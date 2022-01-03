@@ -19,7 +19,7 @@ background-color: #00C3ED;
 .service{}
 
 .service:hover .service-icon{
-    background-color: #06175C !important;
+    background-color: #06175C ;
     color: #00C3ED;
 };
 
@@ -27,3 +27,31 @@ background-color: #00C3ED;
     color: #00C3ED;
     transition: 0.5s;
 };
+
+body{}
+/*------------------
+ media query
+ --------------*/
+ @media only screen and (max-width: 1200px) {
+  
+     .banner-section img{
+width: 100%;
+height: 100%;
+margin-left: 0 !important;
+    };
+    .banner-section br{
+        display: none !important;
+    };
+    .aquarium-text{
+        margin-left: 0 !important;
+    }
+    .banner-section p{
+        width: 100% !important;
+    }
+    .aquarium-maintaince-banner{
+        margin-left: 0 !important;
+    }
+    .aquarium-maintaince-banner article{
+        margin-left: 0 !important;
+    }
+ }
