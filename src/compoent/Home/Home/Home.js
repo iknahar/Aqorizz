@@ -3,6 +3,7 @@ import Header from "../../Shared/Header";
 import Article from "../Articel/Article";
 import Banner from "../Banner/Banner";
 import Products from "../Products/Procusts";
+import PurchaseModal from "../PurchaseModal/PurchaseModal";
 import Review from "../Review/Review";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Products></Products>
       <Article></Article>
       <Review></Review>
+      {/* <PurchaseModal></PurchaseModal> */}
     </div>
   );
 };

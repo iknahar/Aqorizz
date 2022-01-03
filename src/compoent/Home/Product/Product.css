@@ -43,3 +43,15 @@ p {
 .svg-style:hover {
   color: rgb(57, 85, 131);
 }
+.price {
+  display: flex;
+  justify-content: space-around;
+}
+.product-head-demo {
+  padding-top: 70px;
+  text-align: center;
+  color: #06175c;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 80px;
+}

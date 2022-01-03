@@ -43,7 +43,7 @@ const Review = () => {
         }}
         className="mySwiper"
       >
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
             <img
               src="https://i.postimg.cc/Zqq99Kvy/men-talking-260nw-326140295.jpg"
@@ -58,8 +58,8 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
             <img
               src="https://i.postimg.cc/X7cXQywC/91505714-young-asian-woman-executive-working-with-a-mobile-phone-in-office-building.webp"
@@ -74,8 +74,8 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
             <img
               src="https://i.postimg.cc/fyYk4Vp1/charming-female-executive-posing-confidently-260nw-159797027.jpg"
@@ -90,11 +90,10 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
-            {/* <h2>Dr. Taylor</h2>
-            <p>+123456789</p> */}
+         
             <img
               src="https://i.postimg.cc/SKtncFc1/png-clipart-businessperson-smile-graphy-businessman-people-public-relations.png"
               alt=""
@@ -108,8 +107,8 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
             <img
               src="https://i.postimg.cc/9MRrp8pm/young-housewife-apron-showing-copy-260nw-428502229.jpg"
@@ -124,8 +123,8 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
             <img src="https://i.postimg.cc/Mp9H823Z/images.jpg" alt="" />
             <p className="review-name">Arbaz Khan</p>
@@ -137,8 +136,8 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
             <img
               src="https://i.postimg.cc/NMHjTysL/Supreme-Court-Gorsuch-Moments-22084-70c71-0668.webp"
@@ -153,8 +152,8 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
+        </SwiperSlide> */}
+        {/* <SwiperSlide>
           <div style={{ height: "100%" }}>
             <img
               src="https://i.postimg.cc/m2GtYSF4/smiling-successful-man-suit-portrait-smiling-successful-bearded-businessman-formal-suit-standing-aga.jpg"
@@ -169,7 +168,7 @@ const Review = () => {
               praesentium! Necessitatibus, tenetur officiis.
             </p>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );

@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import PurchaseModal from "../PurchaseModal/PurchaseModal";
 import "./Product.css";
 const Product = ({ product }) => {
-  const { Name, description, img, price } = product;
-  return (
-    <div className="col-lg-3 col-md-6 col-sm-12">
-      <div className="card-Style">
-        <img style={{ width: "100%", height: "100%" }} src={img} alt="" />
-        <div className="transition-img">
-          <h4 className="text-warning pt-4">{Name}</h4>
-          <p>{description}</p>
-          <p className="fs-4 fw-bold text-info">Price:{price}</p>
-          <button type="button" class="btn btn-success">
-            Add To card
-          </button>
+  const [show, setShow] = useState(false);
 
-          {/* <Button onClick={handleOpen} sx={{ mb: 4 }} variant="contained">
-              Purchase
-            </Button> */}
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const { name, desc, img, price, DiscountPrice } = product;
+  return (
+    <>
+      <div className="col-lg-3 col-md-6 col-sm-12">
+        <div className="card-Style">
+          <img style={{ width: "100%", height: "100%" }} src={img} alt="" />
+          <div className="transition-img">
+            <h4 className="text-info pt-4">{name}</h4>
+            <p>{desc}</p>
+            <div className="price">
+              <p className="fs-4 fw-bold text-warning">
+                <del>Price:{price}</del>
+              </p>
+              <p className="fs-4 fw-bold text-danger">Price:{DiscountPrice}</p>
+            </div>
+
+            <button onClick={handleShow} type="button" class="btn btn-success">
+              Add To card
+            </button>
+          </div>
         </div>
+        <PurchaseModal
+          handleClose={handleClose}
+          handleShow={handleShow}
+          show={show}
+          product={product}
+        ></PurchaseModal>
       </div>
-    </div>
+    </>
   );
 };
 
