@@ -53,7 +53,7 @@ const useFirebase = () => {
     }
 
     const hanldeUserInfoRegister = (email) => {
-        fetch("https://fast-earth-44959.herokuapp.com/addUserInfo", {
+        fetch("https://powerful-hollows-26581.herokuapp.com/addUserInfo", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ email }),
