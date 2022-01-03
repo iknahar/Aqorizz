@@ -1,8 +1,8 @@
 footer {
-    background-color: #06468f;
+    background-color: #06187C;
     color: #e3e3e3e3;
     padding: 4rem 6rem;
-    border-top: 2px solid #da7400;
+    border-top: 2px solid #FE5E01;
   }
   
   footer hr {
@@ -73,7 +73,7 @@ footer {
   .btn-book {
     display: inline-block;
     border: none;
-    background-color: #da7400;
+    background-color: #FE5E01;
     color: #fff;
     font-size: 18px;
     padding: 12px 24px;
