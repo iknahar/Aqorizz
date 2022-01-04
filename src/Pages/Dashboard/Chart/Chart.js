@@ -44,8 +44,7 @@ const Chart = ({ data, COLORS }) => {
                     </Col>
                 </Row>
             </Container>
-
-        </div>
+        </div >
     );
 };
 
