@@ -10,11 +10,6 @@ const Shop = () => {
 
 
 
-
-
-
-
-
     return (
 
         <section style={{ background: "#E9F2FF", width: "100vw", paddingBottom: 100 }}>

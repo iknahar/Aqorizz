@@ -1,8 +1,6 @@
 import React from 'react';
-import '../../../App.css';
-import '../../style/style.css';
 import Slider from 'react-slick';
-
+import './Fishs.css';
 const Fishs = () => {
 
     const settings = {
@@ -78,7 +76,7 @@ const Fishs = () => {
                         <aside style={{ height: '300px', width: "300px" }}>
                             <img width="300" src={fish.image} alt={fish.name} />
                         </aside>
-
+                        <h1 className='header-text'>HEllo w</h1>
 
                         <h6 style={{ width: "300px", textAlign: "center", background: "#fff", paddingTop: 0 }}>{fish.name}</h6>
 
