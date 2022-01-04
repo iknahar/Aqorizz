@@ -13,6 +13,8 @@ import { useEffect, useState } from "react";
 
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Dashboard from "./Pages/Dashbord/Dashbord/Dashbord";
+import Footer from "./compoent/Shared/Footer/Footer";
+import FishCollections from "./compoent/Home/FIshCollection/FishCollections";
 
 function App() {
   const [loadin, setLoading] = useState(false);
@@ -54,6 +56,9 @@ function App() {
                   <PrivateRoute path="/dashboard">
                     <Dashboard></Dashboard>
                   </PrivateRoute>
+                  <PrivateRoute path="/FishCollection">
+                    <FishCollections></FishCollections>
+                  </PrivateRoute>
                   <Route path="/lipsam">
                     <Lipsome></Lipsome>
                   </Route>
@@ -61,6 +66,7 @@ function App() {
                     <Register />
                   </Route>
                 </Switch>
+                <Footer></Footer>
               </Router>
             </AuthProvider>
           )}
