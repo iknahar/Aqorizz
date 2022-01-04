@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [status, setStatus] = useState(false);
 
   useEffect(() => {
-    fetch("https://young-falls-65140.herokuapp.com/orders")
+    fetch("https://powerful-hollows-26581.herokuapp.com/addOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [status]);
@@ -23,7 +23,7 @@ const ManageOrders = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://young-falls-65140.herokuapp.com/orders/${id}`, {
+        fetch(`https://powerful-hollows-26581.herokuapp.com/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -40,7 +40,7 @@ const ManageOrders = () => {
 
   const handleStatus = (id) => {
     setStatus(false);
-    fetch(`https://young-falls-65140.herokuapp.com/orders/${id}`, {
+    fetch(`https://powerful-hollows-26581.herokuapp.com/statusUpdate/${id}`, {
       method: "PUT",
     })
       .then((res) => res.json())

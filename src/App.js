@@ -10,12 +10,12 @@ import RightAquarium from "./compoent/Home/Articel/RightAquarium";
 import WhatKind from "./compoent/Home/Articel/WhatKins";
 import Lipsome from "./compoent/Home/Articel/Lipsam";
 import { useEffect, useState } from "react";
-
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
-import Dashboard from "./Pages/Dashbord/Dashbord/Dashbord";
 import Footer from "./compoent/Shared/Footer/Footer";
 import FishCollections from "./compoent/Home/FIshCollection/FishCollections";
 import AboutUs from "./compoent/About/About";
+import Contact from "./compoent/Conatct/Contact";
+import Dashboard from "./Pages/Dashbord/Dashbord/Dashbord";
 
 function App() {
   const [loadin, setLoading] = useState(false);
@@ -53,6 +53,9 @@ function App() {
                   </Route>
                   <Route path="/right">
                     <RightAquarium></RightAquarium>
+                  </Route>
+                  <Route path="/contact">
+                    <Contact></Contact>
                   </Route>
                   <Route path="/whatKind">
                     <WhatKind></WhatKind>

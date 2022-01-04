@@ -2,23 +2,21 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import "./Dashbord.css";
-
 import ManageOrders from "../ManageOrders/ManageOrders";
-import ManageProducts from "../ManageProducts/ManageProducts";
 import Pay from "../Pay/Pay";
-import "../MyOrders/MyOrders";
-import AdminRoute from "../../Login/AdminRoute/AdminRoute";
+
+import ManageProducts from "../ManageProducts/ManageProducts";
+
 import DashboardHome from "../DashboardHome/DashboardHome";
-import AddProduct from "../Addproduct/AddProduct";
 import Sidebar from "../Sidebar/Sidebar";
-import MakeAdmin from "../MakeAdmin/MakeAdmin";
-import AddReview from "../AddReview/AddReview";
 import MyOrders from "../MyOrders/MyOrders";
-import useAuth from "../../../hooks/useAuth";
+import Addreview from "../AddReview/AddReview";
+import AddProduct from "../Addproduct/AddProduct";
+import AdminRoute from "../../Login/AdminRoute/AdminRoute";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
 
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
-  const { admin } = useAuth();
 
   const style = {
     color: "white",
@@ -40,13 +38,17 @@ const Dashboard = () => {
               <Route exact path={`${path}`}>
                 <DashboardHome></DashboardHome>
               </Route>
+              <Route path={`${path}/overview`}>
+                <DashboardHome></DashboardHome>
+              </Route>
               <Route path={`${path}/myOrders`}>
                 <MyOrders></MyOrders>
               </Route>
               <Route path={`${path}/addReview`}>
-                <AddReview></AddReview>
+                <Addreview></Addreview>
               </Route>
               <Route path={`${path}/pay`}>
+                {" "}
                 <Pay></Pay>
               </Route>
               <AdminRoute path={`${path}/makeAdmin`}>

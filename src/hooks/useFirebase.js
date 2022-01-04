@@ -18,7 +18,7 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [authError, setAuthError] = useState("");
   const [token, setToken] = useState("");
-  const [admin, setAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const auth = getAuth();
 
@@ -59,7 +59,7 @@ const useFirebase = () => {
   };
 
   const hanldeUserInfoRegister = (email) => {
-    fetch("https://fast-earth-44959.herokuapp.com/addUserInfo", {
+    fetch("https://powerful-hollows-26581.herokuapp.com/addUserInfo", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),
@@ -84,6 +84,20 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, [auth]);
 
+  useEffect(() => {
+    fetch(
+      `https://powerful-hollows-26581.herokuapp.com/checkAdmin/${user?.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data[0]?.role === "admin") {
+          setIsAdmin(true);
+        } else {
+          setIsAdmin(false);
+        }
+      });
+  }, [user?.email]);
+
   const logout = () => {
     setIsLoading(true);
     signOut(auth)
@@ -96,13 +110,6 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  //   personal
-  useEffect(() => {
-    fetch(`https://powerful-hollows-26581.herokuapp.com/${user.email}`)
-      .then((res) => res.json())
-      .then((data) => setAdmin(data.admin));
-  }, [user.email]);
-
   return {
     user,
     token,
@@ -110,8 +117,8 @@ const useFirebase = () => {
     authError,
     registerUser,
     loginUser,
+    isAdmin,
     logout,
-    admin,
   };
 };
 
