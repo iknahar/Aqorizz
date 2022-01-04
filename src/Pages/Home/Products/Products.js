@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Product from "../Product/Product";
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { fetchProducts } from '../../features/servicesSlice';
+import { fetchProducts } from '../../features/productsSlice';
 import { Spinner } from "react-bootstrap";
 
 const Products = () => {
@@ -10,9 +10,9 @@ const Products = () => {
 
     useEffect(() => {
         dispatch(fetchProducts());
-    }, [])
+    }, [dispatch])
 
-    const { products, status } = useSelector(state => state.services);
+    const { products, status } = useSelector(state => state.products);
 
     return (
         <>
