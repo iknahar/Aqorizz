@@ -2,8 +2,8 @@ import React from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Col, Container, Row } from 'react-bootstrap';
-import '../../../App.css';
 import Fishs from '../Fishs/Fishs';
+import '../Fishs/Fishs.css';
 
 const Shop = () => {
 
