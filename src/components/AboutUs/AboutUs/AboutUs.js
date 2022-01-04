@@ -55,11 +55,10 @@ const AboutUs = () => {
 
                     </div>
                 </Container>
-
-
             </section>
 
-
+            {/* gallery */}
+            <Gallary />
 
         </>
     );
