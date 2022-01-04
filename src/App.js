@@ -15,6 +15,7 @@ import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Dashboard from "./Pages/Dashbord/Dashbord/Dashbord";
 import Footer from "./compoent/Shared/Footer/Footer";
 import FishCollections from "./compoent/Home/FIshCollection/FishCollections";
+import AboutUs from "./compoent/About/About";
 
 function App() {
   const [loadin, setLoading] = useState(false);
@@ -46,6 +47,9 @@ function App() {
                   </Route>
                   <Route path="/login">
                     <Login />
+                  </Route>
+                  <Route path="/about">
+                    <AboutUs></AboutUs>
                   </Route>
                   <Route path="/right">
                     <RightAquarium></RightAquarium>
