@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import Alert from '@mui/material/Alert';
-import { CircularProgress, Paper } from '@mui/material';
 import useAuth from '../../Hooks/useAuth';
 import '../../Style/Style.css';
+import { Alert, Spinner } from 'react-bootstrap';
 
 
 
@@ -121,8 +120,8 @@ const CheckoutForm = ({ price }) => {
     return (
         < >
             <form onSubmit={HandleSubmit} className="payment-form" style={{ display: "flex", justifyContent: 'center' }}>
-                <Paper elevation={5}
-                    sx={{ background: "#111318", mt: 20, p: 4, width: 500, mb: 2 }}
+                <article
+                    style={{ background: "#111318", marginTop: 10, padding: 4, width: 500, marginBottom: 2 }}
                 >
                     <CardElement
 
@@ -142,14 +141,14 @@ const CheckoutForm = ({ price }) => {
                             },
                         }}
                     />
-                    {process ? <CircularProgress /> : <button style={payButton} type="submit" disabled={!stripe}>
+                    {process ? <Spinner animation="border" /> : <button style={payButton} type="submit" disabled={!stripe}>
                         Pay $ {price}
                     </button>}
 
-                    {success && <Alert sx={{ mt: 2, mb: 2 }} severity="success">{success}</Alert>}
-                    {error && <Alert severity="error">{error}</Alert>
+                    {success && <Alert className='mt-2 mb-2' variant="success" > {success}</Alert>}
+                    {error && <Alert variant="danger">{error}</Alert>
                     }
-                </Paper>
+                </article>
             </form>
 
         </>

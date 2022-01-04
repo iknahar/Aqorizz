@@ -35,7 +35,6 @@ const Payment = () => {
     return (
         <section style={{ width: '100vw', height: '100vh', background: '#1D2029' }}>
 
-            <Navigation />
             {
                 total > 0 && <Elements stripe={stripePromise}>
                     <CheckoutForm
