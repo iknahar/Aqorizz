@@ -7,6 +7,9 @@ const Banner = () => {
 
     return (
         <section className='container-lg banner-section'>
+
+
+
             <Row>
                 <Col lg={6} xs={12} className='p-0'>
                     <img width="585" height="416" style={{ marginLeft: "63px" }} src="https://i.postimg.cc/6p05PrjX/image-4.jpg" alt="bannerImg" />

@@ -7,15 +7,17 @@ import OurServices from './components/OurServices/OurServices';
 import Banner from './components/Banner/Banner';
 import Shop from './components/Shop/Shop/Shop';
 import './App.css';
+import AboutUs from "./components/AboutUs/AboutUs/AboutUs";
 
 function App() {
 
   return (
     <>
 
-      <OurServices />
-      <Banner />
-      <Shop />
+      {/* <OurServices /> */}
+      {/* <Banner /> */}
+      {/* <Shop /> */}
+      <AboutUs />
     </>
   );
 }
