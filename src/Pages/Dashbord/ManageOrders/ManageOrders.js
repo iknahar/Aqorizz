@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [status, setStatus] = useState(false);
 
   useEffect(() => {
-    fetch("https://powerful-hollows-26581.herokuapp.com/addOrders")
+    fetch("https://powerful-hollows-26581.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [status]);

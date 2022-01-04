@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -7,13 +7,13 @@ import "./Header.css";
 
 const Header = () => {
   const { user, logout } = useAuth();
-
   return (
     <div>
       <Navbar
         collapseOnSelect
         expand="lg"
         bg="dark"
+        className="opset-Header"
         variant="dark"
         fixed="top"
         // style={{ height: "50px" }}

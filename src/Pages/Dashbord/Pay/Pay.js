@@ -1,10 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+import useAuth from "../../../hooks/useAuth";
+import CheckoutForm from "../../../compoent/CheckoutForm/Checkoutform";
+
+const stripePromise = loadStripe(
+  "pk_test_51K93ltBcGooWtax9JKsV2tP7uqmbQYtdpRXFr4Ey1CHijNCVjRMV8eDkLX1YlNvDJHvktGKwvAjYvzFo93K3j06q00slg9hLuX"
+);
 
 const Pay = () => {
+  const { user } = useAuth();
+
+  const [cartProducts, setCartProducts] = useState([]);
+
+  React.useEffect(() => {
+    fetch(`https://whispering-ridge-34346.herokuapp.com/myCart/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => setCartProducts(data));
+  }, [cartProducts, user]);
+
+  // total amount of cart
+  let total = 0;
+  for (const product of cartProducts) {
+    if (!product.quantity) {
+      product.quantity = 1;
+    }
+    total = total + product.price * product.quantity;
+  }
+
   return (
-    <div className="mt-5">
-      <h2>Payment system is coming soon</h2>
-    </div>
+    <section
+      style={{
+        width: "100vw",
+        height: "100vh",
+        marginTop: "150px",
+      }}
+    >
+      {
+        <Elements stripe={stripePromise}>
+          <CheckoutForm cartProducts={cartProducts} price={total + 5} />
+        </Elements>
+      }
+    </section>
   );
 };
 

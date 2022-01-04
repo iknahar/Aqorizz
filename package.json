@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
+    "@stripe/react-stripe-js": "^1.7.0",
+    "@stripe/stripe-js": "^1.22.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -25,6 +27,7 @@
     "react-spinners": "^0.11.0",
     "recharts": "^2.1.8",
     "slick-carousel": "^1.8.1",
+    "stripe": "^8.195.0",
     "sweetalert2": "^11.3.3",
     "swiper": "^6.8.4",
     "web-vitals": "^2.1.2"

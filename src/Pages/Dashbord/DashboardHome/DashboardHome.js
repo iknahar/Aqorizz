@@ -13,10 +13,10 @@ const DashboardHome = () => {
   }, []);
 
   const data = [
-    { name: "Running Orders", Quantity: 150 },
-    { name: "Shipped Orders", Quantity: 120 },
-    { name: "Pending Orders", Quantity: 30 },
-    { name: "Cancel Orders", Quantity: 20 },
+    { name: "Running", Quantity: 150 },
+    { name: "Shipped", Quantity: 120 },
+    { name: "Pending", Quantity: 30 },
+    { name: "Cancel ", Quantity: 20 },
   ];
 
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
