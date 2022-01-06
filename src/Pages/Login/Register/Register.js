@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../../../components/Shared/Header/Header";
+
 import { NavLink, useHistory } from "react-router-dom";
 import useAuth from "./../../../hooks/useAuth";
 import { Alert, Container, Spinner, Button, Row, Col } from "react-bootstrap";
@@ -27,10 +27,10 @@ const Register = () => {
   };
   return (
     <div>
-      <Header></Header>
+     
       <Container>
-        <Row className="mt-5">
-        <h3 className="mt-5"><b>Sign</b> <span className="text-primary"><b>Up</b></span></h3>
+        <Row>
+        <h3><b>Sign</b> <span className="text-primary"><b>Up</b></span></h3>
           <Col>
             {!isLoading && (
               <form onSubmit={handleLoginSubmit}>

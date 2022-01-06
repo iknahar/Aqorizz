@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import useAuth from "./../../../hooks/useAuth";
 import { Alert, Col, Container, Row, Spinner, Button } from "react-bootstrap";
-import Header from "../../../components/Shared/Header/Header";
 
 
 
@@ -29,11 +28,11 @@ const Login = () => {
   
   return (
     <div>
-      <Header></Header>
+      
       <Container>
         <Row className="d-flex align-items-center">
-          <Col className="mt-5">
-          <h3 className="mt-5"><b>Log</b> <span className="text-primary"><b>In</b></span></h3>
+          <Col>
+          <h3><b>Log</b> <span className="text-primary"><b>In</b></span></h3>
             <form onSubmit={handleLoginSubmit}>
               <input
                 className="my-3 p-1 w-75"
