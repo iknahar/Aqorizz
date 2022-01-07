@@ -8,17 +8,40 @@ import Banner from './components/Banner/Banner';
 import Shop from './components/Shop/Shop/Shop';
 import './App.css';
 import AboutUs from "./components/AboutUs/AboutUs/AboutUs";
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
 
   return (
-    <>
+    <div>
 
       {/* <OurServices /> */}
       {/* <Banner /> */}
       <Shop />
       <AboutUs />
-    </>
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
+          </Switch>
+        </Router>
+      </AuthProvider>
+    </div>
   );
 }
 
